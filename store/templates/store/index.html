@@ -1,0 +1,19 @@
+{% if citys %}
+    <ul>
+    {% for city in citys %}
+        <li><a href="{% url 'store:city_detail' city.id %}">{{ city.city_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No city are available.</p>
+{% endif %}
+
+{% if restaurants %}
+    <ul>
+    {% for restaurant in restaurants %}
+        <li><a href="{% url 'store:restaurant_detail' restaurant.id %}">{{ restaurant.res_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No restaurant are available.</p>
+{% endif %}

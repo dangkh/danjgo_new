@@ -13,4 +13,4 @@ class Restaurant(models.Model):
     res_address = models.CharField(max_length=200)
     res_description = models.CharField(max_length=400)
     def __str__(self):
-        return self.Res_name
+        return self.res_name
