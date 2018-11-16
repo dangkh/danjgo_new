@@ -74,3 +74,17 @@ class RestaurantDelete(DeleteView):
     success_url = reverse_lazy('restaurants')
 
 
+class CityCreate(CreateView):
+    model = City
+    fields = '__all__'
+    initial = {'date_of_death': '05/01/2018'}
+
+class CityUpdate(UpdateView):
+    model = City
+    fields = ['city_name']
+
+class CityDelete(DeleteView):
+    model = City
+    success_url = reverse_lazy('citys')
+
+
