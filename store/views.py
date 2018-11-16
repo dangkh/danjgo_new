@@ -8,9 +8,8 @@ from store.forms import RenewCityForm
 from django.contrib.auth.decorators import permission_required
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.urls import reverse_lazy
 
 
 import datetime
@@ -71,7 +70,7 @@ class RestaurantUpdate(UpdateView):
 
 class RestaurantDelete(DeleteView):
     model = Restaurant
-    success_url = reverse_lazy('restaurants')
+    success_url = reverse_lazy('store:restaurant')
 
 
 class CityCreate(CreateView):
@@ -85,6 +84,6 @@ class CityUpdate(UpdateView):
 
 class CityDelete(DeleteView):
     model = City
-    success_url = reverse_lazy('citys')
+    success_url = reverse_lazy('store:citys')
 
 

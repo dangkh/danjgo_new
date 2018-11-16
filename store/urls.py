@@ -17,3 +17,8 @@ urlpatterns += [
     path('restaurant/<int:pk>/update/', views.RestaurantUpdate.as_view(), name='restaurant_update'),
     path('restaurant/<int:pk>/delete/', views.RestaurantDelete.as_view(), name='restaurant_delete'),
 ]
+urlpatterns += [
+    path('city/create/', views.CityCreate.as_view(), name='city_create'),
+    path('city/<int:pk>/update/', views.CityUpdate.as_view(), name='city_update'),
+    path('city/<int:pk>/delete/', views.CityDelete.as_view(), name='city_delete'),
+]

@@ -2,9 +2,9 @@
     <ul>
     {% for city in city_list %}
         <li><a href="{% url 'store:city_detail' city.id %}">{{ city.city_name }}</a></li>
-        {% if user.is_authenticated %}
+        <!-- {% if user.is_authenticated %}
         <li><a href="{% url 'store:renew-city' city.id %}">{{ "renewal" }}</a></li>
-        {% endif %}
+        {% endif %} -->
     {% endfor %}
     </ul>
 {% else %}
